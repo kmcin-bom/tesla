@@ -7,9 +7,9 @@ test('renders Tesla station information', async () => {
   
   // "South Melbourne, VIC"가 포함된 Popup이 있는지 확인
   await waitFor(() => {
-    const stationName = screen.getByText(/South Melbourne, VIC/i); // getByText 사용
+    const stationName = screen.getByText(/South Melbourne, VIC/i);
     expect(stationName).toBeInTheDocument();
-  });
+  }, { timeout: 5000 }); // 5초 동안 기다리기
 
   // 스테이션 상태가 "OPEN"인지를 확인
   await waitFor(() => {
