@@ -39,7 +39,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-leaflet|leaflet)/)"
+      "node_modules/(?!(react-leaflet|leaflet|@react-leaflet/core)/)"
     ],
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
