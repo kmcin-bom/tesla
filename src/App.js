@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import "leaflet/dist/leaflet.css";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+} from 'react-leaflet'
+import L from 'leaflet';
 
-function App() {
+import teslaData from "./data/telsla-sites.json"
+
+const customIcon = new L.Icon({
+  iconUrl: "/img/marker-icon.png",
+  iconSize: [38, 38]
+})
+
+export default function App() {
+  console.log(teslaData)
+
+  const position = [48.8566, 2.3522]
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+
+        {teslaData.map(tsla => (
+          <Marker 
+            key={tsla.id}
+            icon={customIcon}
+            position={[tsla.gps.latitude, tsla.gps.longitude]}
+          />
+      ))}
+    </MapContainer>
   );
 }
 
-export default App;
+
