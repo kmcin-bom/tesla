@@ -15,7 +15,7 @@ const customIcon = new L.Icon({
   iconSize: [38, 38]
 })
 
-const filterredStations = teslaData.filter(tsla => tsla.address.country == "Australia")
+const filterredStations = teslaData.filter(tsla => tsla.address.country === "Australia")
 
 export default function App() {
   console.log(teslaData)
