@@ -14,20 +14,22 @@ const customIcon = new L.Icon({
   iconSize: [38, 38]
 })
 
+const filterredStations = teslaData.filter(tsla => tsla.address.country == "Australia")
+
 export default function App() {
   console.log(teslaData)
 
-  const position = [48.8566, 2.3522]
+  const position = [-37.815338, 144.963226]
 
 
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
+    <MapContainer center={position} zoom={12} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {teslaData.map(tsla => (
+        {filterredStations.map(tsla => (
           <Marker 
             key={tsla.id}
             icon={customIcon}
