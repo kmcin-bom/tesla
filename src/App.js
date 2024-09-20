@@ -18,10 +18,8 @@ const customIcon = new L.Icon({
 const filterredStations = teslaData.filter(tsla => tsla.address.country === "Australia")
 
 export default function App() {
-  console.log(teslaData)
 
   const position = [-37.815338, 144.963226]
-
 
   return (
     <MapContainer center={position} zoom={12} scrollWheelZoom={true}>
