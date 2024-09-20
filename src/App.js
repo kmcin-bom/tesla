@@ -4,6 +4,7 @@ import {
   MapContainer,
   TileLayer,
   Marker,
+  Popup,
 } from 'react-leaflet'
 import L from 'leaflet';
 
@@ -30,11 +31,22 @@ export default function App() {
         />
 
         {filterredStations.map(tsla => (
-          <Marker 
-            key={tsla.id}
+          <Marker  
+            key={tsla.id} 
             icon={customIcon}
-            position={[tsla.gps.latitude, tsla.gps.longitude]}
-          />
+            position={[tsla.gps.latitude, tsla.gps.longitude]}>
+
+            <Popup >
+              <div>
+                <h2>{tsla.name}</h2>
+                <p>{"Status: " + tsla.status}</p>
+                <p>{"Number of charing stations: " + tsla.stallCount}</p>
+                <div>{tsla.address.street}, {tsla.address.city},{tsla.address.state} </div>
+              </div>
+              
+            </Popup>
+
+          </Marker>
       ))}
     </MapContainer>
   );
