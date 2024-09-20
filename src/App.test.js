@@ -5,7 +5,7 @@ test('renders Tesla station information', async () => {
   render(<App />);
 
   // 예를 들어 Ashburn, VA가 이름으로 포함된 Popup이 있는지 확인
-  const stationName = await screen.findByText(/Ashburn, VA/i);
+  const stationName = await screen.findByText(/Eaton, WA/i);
   expect(stationName).toBeInTheDocument();
 
   // 스테이션 상태가 "OPEN"인지를 확인
