@@ -40,6 +40,12 @@
   "jest": {
     "transformIgnorePatterns": [
       "node_modules/(?!(react-leaflet|leaflet)/)"
-    ]
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
