@@ -1,0 +1,79 @@
+[
+  {
+    "id": 8190,
+    "locationId": "southmelbournevic",
+    "name": "South Melbourne, VIC",
+    "status": "OPEN",
+    "address": {
+        "street": "261 Clarendon St",
+        "city": "South Melbourne",
+        "state": "Vic",
+        "zip": "3205",
+        "countryId": 116,
+        "country": "Australia",
+        "regionId": 102,
+        "region": "Asia Pacific"
+    },
+    "gps": {
+        "latitude": -37.831942,
+        "longitude": 144.96085
+    },
+    "dateOpened": "2024-08-09",
+    "stallCount": 6,
+    "counted": true,
+    "elevationMeters": 11,
+    "powerKilowatt": 250,
+    "solarCanopy": false,
+    "battery": false,
+    "otherEVs": false,
+    "statusDays": 0,
+    "urlDiscuss": true,
+    "stalls": {
+        "v4": 6
+    },
+    "plugs": {
+        "ccs2": 6
+    },
+    "plugshareId": 638834
+},
+{
+    "id": 8141,
+    "name": "Anaheim - N Imperial Hwy, CA",
+    "status": "CONSTRUCTION",
+    "address": {
+        "street": "156 N Imperial Hwy",
+        "city": "Anaheim",
+        "state": "CA",
+        "zip": "92807",
+        "countryId": 100,
+        "country": "USA",
+        "regionId": 100,
+        "region": "North America"
+    },
+    "gps": {
+        "latitude": 33.852506,
+        "longitude": -117.790257
+    },
+    "stallCount": 16,
+    "counted": true,
+    "elevationMeters": 95,
+    "powerKilowatt": 250,
+    "solarCanopy": false,
+    "battery": false,
+    "otherEVs": true,
+    "statusDays": 77,
+    "urlDiscuss": true,
+    "stalls": {
+        "v4": 16,
+        "accessible": 1
+    },
+    "plugs": {
+        "nacs": 16,
+        "ccs1": 16,
+        "multi": 16
+    },
+    "parkingId": 1,
+    "facilityName": "BevMo!"
+}
+  ]
+  

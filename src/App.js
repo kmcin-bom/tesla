@@ -8,7 +8,7 @@ import {
 } from 'react-leaflet'
 import L from 'leaflet';
 
-import teslaData from "./data/telsla-sites.json"
+import teslaData from "./data/tesla-sites-sample.json"
 
 const customIcon = new L.Icon({
   iconUrl: "/img/marker-icon.png",
