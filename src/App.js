@@ -11,7 +11,7 @@ import L from 'leaflet';
 import teslaData from "./data/tesla-sites.json"
 
 const customIcon = new L.Icon({
-  iconUrl: "/img/marker-icon.png",
+  iconUrl: "./img/marker-icon.png",
   iconSize: [38, 38]
 })
 
