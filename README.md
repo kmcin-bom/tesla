@@ -34,9 +34,9 @@ cd tesla
 
 > [!TIP]
 > **ecCodes GRIB keys vs. xarray fields:**
-
-| ecCodes Key    | xarray Attribute or Field        |
-|----------------|----------------------------------|
-| shortName      | ds.data_vars['t2m'], etc.        |
-| dataDate       | ds.time.values                   |
-| centre         | ds.attrs['GRIB_centre']          |
+> 
+> | ecCodes Key    | xarray Attribute or Field        |
+> |----------------|----------------------------------|
+> | shortName      | ds.data_vars['t2m'], etc.        |
+> | dataDate       | ds.time.values                   |
+> | centre         | ds.attrs['GRIB_centre']          |
